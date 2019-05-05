@@ -1,111 +1,115 @@
-//Exercises 1 
-checkNumber(9,5);
-checkNumber(2,6);
-
-function checkNumber(num1,num2){
-    if(num1<num2){
-        console.log(num1);
-    }
-    else {
-        console.log(num2);
-    }
-    }
-
- //Exercises 2
- checkWords("wo","a","word3","hghjg");
-
-
-function checkWords(word1,word2,word3,word4){
-    if(word1.lenght>2){
-        result1 = 1;
-    }
-    else if(word1.lenght<2){
-        result1 = 0;
-    }
-    if(word2.lenght>2){
-        result2 = 1;
-    }
-    else if(word2.lenght<2){
-        result2 = 0;
-    }
-    if(word3.lenght>2){
-        result3 = 1;
-    }
-    else if(word3.lenght<2){
-        result3 = 0;
-    }
-    if(word4.lenght>2){
-        result4 = 1;
-    }
-    else if(word4.lenght<2){
-        result4 = 0;
-        console.log(result1+result2+result3+result4);
-    }
-    }
-
-    //Exercises 3 
-
-    function checkA(){
-        let check = document.getElementById("myInput").value;
-        if(check.indexOf("A")==1){
-             let bigA = check.indexOf("A");
-             let smallA = "a";
-             let res = check.replace(bigA,smallA);
-            console.log(res);
-         }
-    }
-
-
-    //Exercises 4
-
-    
-    checkNumber1(35);
-
-    function checkNumber1(num){
-        if(num>=0&&num%2==0){
-            console.log("positive and Even");
-        }
-        else if(num<0&&num%2==0){
-            console.log("Negativ and Even");
-        }
-        else if(num>0&&num>=0){
-            console.log("Positive and Odd");
+//Exercises 1
+let checkPassport = () => {
+    let valueOfInput = document.getElementById("myInput").value;
+    for(index = 0; index<=valueOfInput.lenght-1;index++){
+        if(valueOfInput.lenght<=8&&valueOfInput.charAt(index<="9")){
+            console.log("YES");
         }
         else{
-            console.log("Negative and Odd");
+            console.log("NO");
         }
+        
     }
 
-    //Exercises 5 
+}
 
 
-    checkLetter("ABBA")
+//Exercises 2 
 
-    function checkLetter(strin){
-        let first = strin.charAt(0);
-        let last = strin.lenght-1;
-        if(first = last){
-         let resul = strin.slice(1,strin.lenght-2);
-          console.log(resul);
+let checkNumber = (number) => {
+    for(i=2;i<number;i++){
+        if(number%i==0){
+            return false;
+        }
+        else{
+            return true;
         }
     }
+}
+
+console.log(checkNumber(7));
+console.log(checkNumber(15));
+console.log(checkNumber(26));
+console.log(checkNumber(3));
 
 
-    //Exercises 6 
+//Exercises 3 
+funcArCase("asasA");
 
-    checkSimbols("dja₪sk@jlk")
- 
-    function checkSimbols(string){
-        if(string.indexOf("*")>=1){
-        let star = string.indexOf("*");
-        let res1 = string.slice(0,star);
-        let res2 = string.slice(star+1,string.lenght);
-            console.log(res1+res2);
+function funcArCase (str){
+    let space = " ";
+    for(i = 0; i<str.lenght; i++){
+        if(str.charAt(i)>="A"&&str.charAt(i)<="Z"){
+            let newStr = str.replace(str.charAt(i),space + charAt(i));
+            console.log(newStr);
         }
-        else if(string.indexOf("@")>=1){
-            console.log("*"+string+"*");
-        }
-        else if(string.indexOf("₪")>=1){
-            console.log("new shekel");
+        
+        else{
+            console.log(str);
         }
     }
+}
+
+
+//exercises 6
+
+
+let Square = () => {
+
+    let size = 6;
+    let str = "";
+    for(i=0;i<size;i++){
+        str+="*";
+    }
+    str+="\n";
+    for(j=0;j<size-2;j++){
+        str+="*";
+        for(b=0;b<size-2;b++){
+            str+=" ";
+        }
+        str+="*";
+        str+="\n";
+    }
+    
+
+    for(i=0;i<size;i++){
+        str+="*";
+    }
+
+    console.log(str);
+}
+
+Square();
+
+
+//Exercises 5
+
+
+let checkString = (first,second) => {
+  let counter = 0;
+  if(first.lenght<second.lenght){
+      for(ind=1;ind<=second.lenght;ind++){
+           counter++;
+      }
+      console.log("Second string biggest"+ counter);
+  }
+  else if(first.lenght>second.lenght){
+      for(ind =1;ind<=first.lenght;ind++){
+        counter++;
+      }
+      console.log("First string biggest"+ counter);
+  }
+}
+
+checkString ("ad","dasdsads")
+
+
+//Exercises 4 
+let inside = prompt("put the numbers");
+let biggest = charAt[0];
+for(i=0; i<inside.length&&i>0; i++){
+    if(inside.charAt[i]>biggest){
+        biggest = inside.charAt[i];
+    }
+}
+console.log(biggest);
