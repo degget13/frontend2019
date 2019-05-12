@@ -1,115 +1,85 @@
+  
 //Exercises 1
-let checkPassport = () => {
-    let valueOfInput = document.getElementById("myInput").value;
-    for(index = 0; index<=valueOfInput.lenght-1;index++){
-        if(valueOfInput.lenght<=8&&valueOfInput.charAt(index<="9")){
-            console.log("YES");
-        }
-        else{
-            console.log("NO");
-        }
-        
-    }
-
-}
 
 
-//Exercises 2 
-
-let checkNumber = (number) => {
-    for(i=2;i<number;i++){
-        if(number%i==0){
-            return false;
-        }
-        else{
-            return true;
-        }
-    }
-}
-
-console.log(checkNumber(7));
-console.log(checkNumber(15));
-console.log(checkNumber(26));
-console.log(checkNumber(3));
-
-
-//Exercises 3 
-funcArCase("asasA");
-
-function funcArCase (str){
-    let space = " ";
-    for(i = 0; i<str.lenght; i++){
-        if(str.charAt(i)>="A"&&str.charAt(i)<="Z"){
-            let newStr = str.replace(str.charAt(i),space + charAt(i));
-            console.log(newStr);
-        }
-        
-        else{
-            console.log(str);
-        }
-    }
-}
-
-
-//exercises 6
-
-
-let Square = () => {
-
-    let size = 6;
-    let str = "";
-    for(i=0;i<size;i++){
-        str+="*";
-    }
-    str+="\n";
-    for(j=0;j<size-2;j++){
-        str+="*";
-        for(b=0;b<size-2;b++){
-            str+=" ";
-        }
-        str+="*";
-        str+="\n";
-    }
-    
-
-    for(i=0;i<size;i++){
-        str+="*";
-    }
-
-    console.log(str);
-}
-
-Square();
-
-
-//Exercises 5
-
-
-let checkString = (first,second) => {
-  let counter = 0;
-  if(first.lenght<second.lenght){
-      for(ind=1;ind<=second.lenght;ind++){
-           counter++;
-      }
-      console.log("Second string biggest"+ counter);
-  }
-  else if(first.lenght>second.lenght){
-      for(ind =1;ind<=first.lenght;ind++){
+let mat = [[1,2,3],[4,5,6],[7,8,9,10]];
+let sum1 = 0;
+let counter = 0;
+for(row=0;row<mat.length;row++){
+    for(col = 0;col<mat[row].length;col++){
+        sum1+=mat[row][col];
         counter++;
-      }
-      console.log("First string biggest"+ counter);
-  }
-}
-
-checkString ("ad","dasdsads")
-
-
-//Exercises 4 
-let inside = prompt("put the numbers");
-let biggest = charAt[0];
-for(i=0; i<inside.length&&i>0; i++){
-    if(inside.charAt[i]>biggest){
-        biggest = inside.charAt[i];
+        console.log(sum1/counter);
     }
-}
-console.log(biggest);
+   }
+//Exercises2 
+let arry = [2,5,8,9,4,2];
+
+let checkNumbers = (arry) => {
+    let count = [0,0,0,0,0,0,0,0,0,0];
+    for(i=0;i<arry.length; i++){
+        if(arry[i]>="0"&&arry[i]<="9"){
+            count[arry[i]-48]++;
+        }
+    }
+    let max = count[0];
+    let index = 0;
+    for(i=0;i<count.length;i++){
+         if(count[i]>max){
+             max = count[i];
+             index = i;
+         }
+         console.log(count);
+    }
+  return  index;
+  }
+  checkNumbers(arry);
+ //Exercises 3 
+ let ary1 = [2,4,5,9,7,9,5,2,6];
+ let ary2 = [4,2,5,8,4,8,7,9];
+
+ let doubleNumbers = (ary1,ary2)=>{
+     let result =[];
+     for(i=0;i<ary1.length;i++){
+         for(j=0;j<ary2.length;j++){
+             if(i==j){
+                 result.push(i);
+             }
+         }
+
+     }
+ }
+
+ console.log(doubleNumbers(ary1,ary2));
+ //Exercises 4
+
+
+
+
+
+
+//Exercises 5 
+
+  let matr = [["S","dadA","klA"],["fjL","dsQ","WEr"],["mnJ","bjbH","MkJ","MlK"]];
+console.log(matr.length);
+ let primeLetter = (matr)=>{
+  let letterCounter = 0;
+  for(row=0; row<matr.length; row++){
+      for(col = 0; col<matr[row].length; col++){
+          if(matr[i]>="A"&&matr[i]<="Z"){
+               letterCounter++;
+          }
+          console.log(letterCounter);
+      }
+     }
+    }
+    primeLetter();
+     //Exercises 7
+     let quadMat =[[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4],[2,3,4,5,6,7,5,5,4]];
+     let func = (quadMat) =>{
+       for(row=0; row<quadMat.length; row++){
+
+       }  
+
+     }
+ 
